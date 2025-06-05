@@ -12,6 +12,14 @@
 		D6DDF60B2DF0E180000D71E5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF60A2DF0E180000D71E5 /* Item.swift */; };
 		D6DDF60D2DF0E184000D71E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6DDF60C2DF0E184000D71E5 /* Assets.xcassets */; };
 		D6DDF6102DF0E184000D71E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6DDF60F2DF0E184000D71E5 /* Preview Assets.xcassets */; };
+		D6DDF6172DF0E395000D71E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6162DF0E395000D71E5 /* HomeView.swift */; };
+		D6DDF61A2DF0E3B3000D71E5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6192DF0E3B3000D71E5 /* MenuView.swift */; };
+		D6DDF6222DF11806000D71E5 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6212DF11806000D71E5 /* Dish.swift */; };
+		D6DDF6252DF11915000D71E5 /* DishCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6242DF11915000D71E5 /* DishCard.swift */; };
+		D6DDF6272DF2242C000D71E5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6DDF6262DF2242C000D71E5 /* Colors.xcassets */; };
+		D6DDF62C2DF2283A000D71E5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF62B2DF2283A000D71E5 /* Tab.swift */; };
+		D6DDF6302DF2318D000D71E5 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF62F2DF2318D000D71E5 /* TabShape.swift */; };
+		D6DDF6322DF232C1000D71E5 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6312DF232C1000D71E5 /* TabPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +29,14 @@
 		D6DDF60A2DF0E180000D71E5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D6DDF60C2DF0E184000D71E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6DDF60F2DF0E184000D71E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D6DDF6162DF0E395000D71E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D6DDF6192DF0E3B3000D71E5 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		D6DDF6212DF11806000D71E5 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		D6DDF6242DF11915000D71E5 /* DishCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCard.swift; sourceTree = "<group>"; };
+		D6DDF6262DF2242C000D71E5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D6DDF62B2DF2283A000D71E5 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		D6DDF62F2DF2318D000D71E5 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
+		D6DDF6312DF232C1000D71E5 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +69,13 @@
 		D6DDF6052DF0E180000D71E5 /* HomeBites */ = {
 			isa = PBXGroup;
 			children = (
+				D6DDF6232DF11809000D71E5 /* Model */,
+				D6DDF6182DF0E39D000D71E5 /* View */,
 				D6DDF6062DF0E180000D71E5 /* HomeBitesApp.swift */,
 				D6DDF6082DF0E180000D71E5 /* ContentView.swift */,
 				D6DDF60A2DF0E180000D71E5 /* Item.swift */,
 				D6DDF60C2DF0E184000D71E5 /* Assets.xcassets */,
+				D6DDF6262DF2242C000D71E5 /* Colors.xcassets */,
 				D6DDF60E2DF0E184000D71E5 /* Preview Content */,
 			);
 			path = HomeBites;
@@ -68,6 +87,35 @@
 				D6DDF60F2DF0E184000D71E5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D6DDF6182DF0E39D000D71E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6DDF6332DF23517000D71E5 /* TabBar */,
+				D6DDF6162DF0E395000D71E5 /* HomeView.swift */,
+				D6DDF6192DF0E3B3000D71E5 /* MenuView.swift */,
+				D6DDF6242DF11915000D71E5 /* DishCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6DDF6232DF11809000D71E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6DDF6212DF11806000D71E5 /* Dish.swift */,
+				D6DDF62B2DF2283A000D71E5 /* Tab.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6DDF6332DF23517000D71E5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D6DDF62F2DF2318D000D71E5 /* TabShape.swift */,
+				D6DDF6312DF232C1000D71E5 /* TabPosition.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DDF6272DF2242C000D71E5 /* Colors.xcassets in Resources */,
 				D6DDF6102DF0E184000D71E5 /* Preview Assets.xcassets in Resources */,
 				D6DDF60D2DF0E184000D71E5 /* Assets.xcassets in Resources */,
 			);
@@ -140,9 +189,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DDF61A2DF0E3B3000D71E5 /* MenuView.swift in Sources */,
 				D6DDF6092DF0E180000D71E5 /* ContentView.swift in Sources */,
+				D6DDF6322DF232C1000D71E5 /* TabPosition.swift in Sources */,
 				D6DDF60B2DF0E180000D71E5 /* Item.swift in Sources */,
 				D6DDF6072DF0E180000D71E5 /* HomeBitesApp.swift in Sources */,
+				D6DDF6172DF0E395000D71E5 /* HomeView.swift in Sources */,
+				D6DDF62C2DF2283A000D71E5 /* Tab.swift in Sources */,
+				D6DDF6222DF11806000D71E5 /* Dish.swift in Sources */,
+				D6DDF6252DF11915000D71E5 /* DishCard.swift in Sources */,
+				D6DDF6302DF2318D000D71E5 /* TabShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
