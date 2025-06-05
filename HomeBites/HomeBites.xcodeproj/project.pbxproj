@@ -20,6 +20,7 @@
 		D6DDF62C2DF2283A000D71E5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF62B2DF2283A000D71E5 /* Tab.swift */; };
 		D6DDF6302DF2318D000D71E5 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF62F2DF2318D000D71E5 /* TabShape.swift */; };
 		D6DDF6322DF232C1000D71E5 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6312DF232C1000D71E5 /* TabPosition.swift */; };
+		D6DDF6372DF262DF000D71E5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6362DF262DF000D71E5 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D6DDF62B2DF2283A000D71E5 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		D6DDF62F2DF2318D000D71E5 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
 		D6DDF6312DF232C1000D71E5 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
+		D6DDF6362DF262DF000D71E5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				D6DDF6162DF0E395000D71E5 /* HomeView.swift */,
 				D6DDF6192DF0E3B3000D71E5 /* MenuView.swift */,
 				D6DDF6242DF11915000D71E5 /* DishCard.swift */,
+				D6DDF6362DF262DF000D71E5 /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				D6DDF6072DF0E180000D71E5 /* HomeBitesApp.swift in Sources */,
 				D6DDF6172DF0E395000D71E5 /* HomeView.swift in Sources */,
 				D6DDF62C2DF2283A000D71E5 /* Tab.swift in Sources */,
+				D6DDF6372DF262DF000D71E5 /* HeaderView.swift in Sources */,
 				D6DDF6222DF11806000D71E5 /* Dish.swift in Sources */,
 				D6DDF6252DF11915000D71E5 /* DishCard.swift in Sources */,
 				D6DDF6302DF2318D000D71E5 /* TabShape.swift in Sources */,
