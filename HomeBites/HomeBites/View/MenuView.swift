@@ -9,10 +9,11 @@ import SwiftUI
 
 struct MenuView: View {
     let dishes = Dish.all()
+    @State private var showAddDishModal: Bool = false
     
     var body: some View {
         VStack(spacing: 0) {
-            HeaderView()
+            HeaderView(showAddDishModal: $showAddDishModal)
             
             HStack(spacing: 8) {
                 ScrollView {
@@ -49,6 +50,9 @@ struct MenuView: View {
                 }
             }.padding(.bottom)
         }.edgesIgnoringSafeArea(.top)
+        .sheet(isPresented: $showAddDishModal) {
+            AddDishView()
+        }
     }
 }
 

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @Binding var showAddDishModal: Bool
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             Image("kitchen_cupboard")
@@ -36,6 +38,16 @@ struct HeaderView: View {
                         .shadow(radius: 4)
     
                     Spacer()
+                    
+                    Button(action: {
+                        self.showAddDishModal = true
+                    }, label: {
+                        Image(systemName: "plus")
+                            .frame(width: 25, height: 25)
+                            .foregroundStyle(Color.white)
+                            .background(.black.opacity(0.6))
+                            .clipShape(Circle())
+                    })
                 }
             }.padding()
         }
@@ -43,5 +55,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
+    HeaderView(showAddDishModal: .constant(false))
 }
