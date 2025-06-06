@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MenuView: View {
-    let dishes = Dish.all()
+//    let dishes = Dish.all()
+    @Query private var dishes: [Dish]
     @State private var showAddDishModal: Bool = false
     
     var body: some View {

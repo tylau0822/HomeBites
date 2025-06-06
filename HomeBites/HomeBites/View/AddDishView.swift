@@ -6,16 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 import PhotosUI
 
 struct AddDishView: View {
-    @State private var selectedItem: PhotosPickerItem? = nil
-    @State private var selectedImage: UIImage? = nil
-    @State private var name: String = ""
-    @State private var rating: Int = 5
-    @State private var isAvailable: Bool = true
-    @State private var description: String = ""
-    
+    @StateObject private var viewModel = DishViewModel()
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -26,8 +22,8 @@ struct AddDishView: View {
                     HStack {
                         Spacer()
                         
-                        PhotosPicker(selection: $selectedItem, matching: .images, photoLibrary: .shared()) {
-                            if let image = selectedImage {
+                        PhotosPicker(selection: $viewModel.selectedItem, matching: .images) {
+                            if let image = viewModel.selectedImage {
                                 Image(uiImage: image)
                                     .resizable()
                                     .scaledToFill()
@@ -46,12 +42,8 @@ struct AddDishView: View {
                                 .background(Color.gray.opacity(0.1))
                                 .cornerRadius(25)
                             }
-                        }.onChange(of: selectedItem) { _, newItem in
-                            Task {
-                                if let data = try? await newItem?.loadTransferable(type: Data.self), let uiImage = UIImage(data: data) {
-                                    selectedImage = uiImage
-                                }
-                            }
+                        }.onChange(of: viewModel.selectedItem) {
+                            viewModel.handleImageSelection()
                         }
                         
                         Spacer()
@@ -62,7 +54,7 @@ struct AddDishView: View {
                         Text("Name")
                             .font(.system(size: 14))
                         Spacer()
-                        TextField("Enter Dish name", text: $name)
+                        TextField("Enter Dish name", text: $viewModel.name)
                             .font(.system(size: 14))
                             .multilineTextAlignment(.trailing)
                     }
@@ -74,11 +66,11 @@ struct AddDishView: View {
                         Spacer()
                         HStack(spacing: 2) {
                             ForEach(1...5, id: \.self) { index in
-                                Image(systemName: index <= rating ? "star.fill" : "star")
+                                Image(systemName: index <= viewModel.rating ? "star.fill" : "star")
                                     .font(.system(size: 14))
                                     .foregroundColor(.yellow)
                                     .onTapGesture {
-                                        rating = index
+                                        viewModel.rating = index
                                     }
                             }
                         }
@@ -89,8 +81,9 @@ struct AddDishView: View {
                         Text("Available")
                             .font(.system(size: 14))
                         Spacer()
-                        Toggle("", isOn: $isAvailable)
-                            .scaleEffect(0.7, anchor: .trailing)
+                        Toggle("", isOn: $viewModel.isAvailable)
+                            .labelsHidden()
+                            .scaleEffect(0.8)
                     }
                         
 
@@ -98,7 +91,7 @@ struct AddDishView: View {
                     HStack(alignment: .top, spacing: 16) {
                         Text("Description")
                             .font(.system(size: 14))
-                        TextEditor(text: $description)
+                        TextEditor(text: $viewModel.dishDescription)
                             .frame(height: 100)
                             .font(.system(size: 14))
                             .padding(.vertical, -8)
@@ -109,13 +102,14 @@ struct AddDishView: View {
                 
                 // Save Button
                 Button("Save") {
+                    viewModel.save(context: context)
                     dismiss()
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
-                .background(name.isEmpty ? .heather : .ashyBlue)
+                .background(viewModel.isValid ? .ashyBlue : .heather)
                 .foregroundStyle(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .padding()
-                .disabled(name.isEmpty)
+                .disabled(!viewModel.isValid)
             }.navigationTitle(Text("Add Dish"))
             .navigationBarTitleDisplayMode(.inline)
         }

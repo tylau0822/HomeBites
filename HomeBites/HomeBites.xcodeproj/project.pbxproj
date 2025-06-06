@@ -22,6 +22,7 @@
 		D6DDF6322DF232C1000D71E5 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6312DF232C1000D71E5 /* TabPosition.swift */; };
 		D6DDF6372DF262DF000D71E5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6362DF262DF000D71E5 /* HeaderView.swift */; };
 		D6DDF6392DF26450000D71E5 /* AddDishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6382DF26450000D71E5 /* AddDishView.swift */; };
+		D6DDF63B2DF39523000D71E5 /* DishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF63A2DF39523000D71E5 /* DishViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		D6DDF6312DF232C1000D71E5 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 		D6DDF6362DF262DF000D71E5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D6DDF6382DF26450000D71E5 /* AddDishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishView.swift; sourceTree = "<group>"; };
+		D6DDF63A2DF39523000D71E5 /* DishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		D6DDF6052DF0E180000D71E5 /* HomeBites */ = {
 			isa = PBXGroup;
 			children = (
+				D6DDF63C2DF395D2000D71E5 /* ViewModel */,
 				D6DDF6232DF11809000D71E5 /* Model */,
 				D6DDF6182DF0E39D000D71E5 /* View */,
 				D6DDF6062DF0E180000D71E5 /* HomeBitesApp.swift */,
@@ -122,6 +125,14 @@
 				D6DDF6312DF232C1000D71E5 /* TabPosition.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D6DDF63C2DF395D2000D71E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6DDF63A2DF39523000D71E5 /* DishViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				D6DDF6392DF26450000D71E5 /* AddDishView.swift in Sources */,
 				D6DDF61A2DF0E3B3000D71E5 /* MenuView.swift in Sources */,
 				D6DDF6092DF0E180000D71E5 /* ContentView.swift in Sources */,
+				D6DDF63B2DF39523000D71E5 /* DishViewModel.swift in Sources */,
 				D6DDF6322DF232C1000D71E5 /* TabPosition.swift in Sources */,
 				D6DDF60B2DF0E180000D71E5 /* Item.swift in Sources */,
 				D6DDF6072DF0E180000D71E5 /* HomeBitesApp.swift in Sources */,

@@ -13,11 +13,18 @@ struct DishCard: View {
     var body: some View {
         HStack(alignment: .center) {
             HStack(alignment: .top, spacing: 12) {
-                Image(dish.image ?? "")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 50, height: 50)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                if let data = dish.imageData, let uiImage = UIImage(data: data) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 50, height: 50)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                } else {
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.gray.opacity(0.2))
+                        .frame(width: 50, height: 50)
+                        .overlay(Image(systemName: "photo").foregroundColor(.gray))
+                }
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(dish.name)
@@ -48,5 +55,5 @@ struct DishCard: View {
 }
 
 #Preview {
-    DishCard(dish: Dish(name: "Roast Chicken", image: "roast_chicken", rating: 4))
+    DishCard(dish: Dish(name: "Roast Chicken", rating: 4, isAvailable: true, dishDescription: ""))
 }

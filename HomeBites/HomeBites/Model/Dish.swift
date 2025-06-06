@@ -6,19 +6,22 @@
 //
 
 import Foundation
+import SwiftData
 
-struct Dish: Identifiable {
+@Model
+class Dish: Identifiable {
     let id = UUID()
     var name: String
-    var image: String?
+    var imageData: Data?
     var rating: Int
-}
-
-extension Dish {
-    static func all() -> [Dish] {
-        return [
-            Dish(name: "Roast Chicken", image: "roast_chicken", rating: 4),
-            Dish(name: "Pasta", image: "pasta", rating: 5)
-        ]
+    var isAvailable: Bool
+    var dishDescription: String
+    
+    init(name: String = "", imageData: Data? = nil, rating: Int = 5, isAvailable: Bool = true, dishDescription: String = "") {
+        self.name = name
+        self.imageData = imageData
+        self.rating = rating
+        self.isAvailable = isAvailable
+        self.dishDescription = dishDescription
     }
 }
