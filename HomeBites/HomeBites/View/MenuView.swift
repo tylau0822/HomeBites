@@ -11,11 +11,10 @@ import SwiftData
 struct MenuView: View {
 //    let dishes = Dish.all()
     @Query private var dishes: [Dish]
-    @State private var showAddDishModal: Bool = false
     
     var body: some View {
         VStack(spacing: 0) {
-            HeaderView(showAddDishModal: $showAddDishModal)
+            HeaderView()
             
             HStack(spacing: 8) {
                 ScrollView {
@@ -52,9 +51,6 @@ struct MenuView: View {
                 }
             }.padding(.bottom)
         }.edgesIgnoringSafeArea(.top)
-        .sheet(isPresented: $showAddDishModal) {
-            AddDishView()
-        }
     }
 }
 

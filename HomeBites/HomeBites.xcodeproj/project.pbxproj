@@ -23,6 +23,7 @@
 		D6DDF6372DF262DF000D71E5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6362DF262DF000D71E5 /* HeaderView.swift */; };
 		D6DDF6392DF26450000D71E5 /* AddDishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6382DF26450000D71E5 /* AddDishView.swift */; };
 		D6DDF63B2DF39523000D71E5 /* DishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF63A2DF39523000D71E5 /* DishViewModel.swift */; };
+		D6DDF6402DF4B783000D71E5 /* FloatingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF63F2DF4B783000D71E5 /* FloatingTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		D6DDF6362DF262DF000D71E5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D6DDF6382DF26450000D71E5 /* AddDishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishView.swift; sourceTree = "<group>"; };
 		D6DDF63A2DF39523000D71E5 /* DishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewModel.swift; sourceTree = "<group>"; };
+		D6DDF63F2DF4B783000D71E5 /* FloatingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				D6DDF62F2DF2318D000D71E5 /* TabShape.swift */,
 				D6DDF6312DF232C1000D71E5 /* TabPosition.swift */,
+				D6DDF63F2DF4B783000D71E5 /* FloatingTabBar.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				D6DDF62C2DF2283A000D71E5 /* Tab.swift in Sources */,
 				D6DDF6372DF262DF000D71E5 /* HeaderView.swift in Sources */,
 				D6DDF6222DF11806000D71E5 /* Dish.swift in Sources */,
+				D6DDF6402DF4B783000D71E5 /* FloatingTabBar.swift in Sources */,
 				D6DDF6252DF11915000D71E5 /* DishCard.swift in Sources */,
 				D6DDF6302DF2318D000D71E5 /* TabShape.swift in Sources */,
 			);

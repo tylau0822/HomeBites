@@ -2,10 +2,6 @@
 //  HomeView.swift
 //  HomeBites
 //
-//  Inspired by Kavsoft's SwiftUI Curved Tab Bar tutorial
-//  https://www.youtube.com/watch?v=XZuc8WnZIS4
-//  © Kavsoft – https://kavsoft.dev
-//
 //  Created by LAU TSZ YING on 4/6/2025.
 //
 
@@ -15,6 +11,7 @@ struct HomeView: View {
     @State private var activeTab: Tab = .menu
     @Namespace private var animation
     @State private var tabShapePosition: CGPoint = .zero
+    @State private var showAddDishModal: Bool = false
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -33,7 +30,9 @@ struct HomeView: View {
                     .tag(Tab.profile)
             }
             
-            CurvedTabBar()
+            FloatingTabBar(activeTab: $activeTab, showAddDishModal: $showAddDishModal)
+        }.sheet(isPresented: $showAddDishModal) {
+            AddDishView()
         }
     }
     
