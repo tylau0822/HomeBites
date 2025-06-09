@@ -24,6 +24,9 @@
 		D6DDF6392DF26450000D71E5 /* AddDishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6382DF26450000D71E5 /* AddDishView.swift */; };
 		D6DDF63B2DF39523000D71E5 /* DishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF63A2DF39523000D71E5 /* DishViewModel.swift */; };
 		D6DDF6402DF4B783000D71E5 /* FloatingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF63F2DF4B783000D71E5 /* FloatingTabBar.swift */; };
+		D6DDF6422DF4E561000D71E5 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6412DF4E561000D71E5 /* CartView.swift */; };
+		D6DDF6462DF4EC8A000D71E5 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6452DF4EC8A000D71E5 /* CartItem.swift */; };
+		D6DDF6482DF4ECC1000D71E5 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DDF6472DF4ECC1000D71E5 /* CartViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		D6DDF6382DF26450000D71E5 /* AddDishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishView.swift; sourceTree = "<group>"; };
 		D6DDF63A2DF39523000D71E5 /* DishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewModel.swift; sourceTree = "<group>"; };
 		D6DDF63F2DF4B783000D71E5 /* FloatingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBar.swift; sourceTree = "<group>"; };
+		D6DDF6412DF4E561000D71E5 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		D6DDF6452DF4EC8A000D71E5 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		D6DDF6472DF4ECC1000D71E5 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 				D6DDF6242DF11915000D71E5 /* DishCard.swift */,
 				D6DDF6362DF262DF000D71E5 /* HeaderView.swift */,
 				D6DDF6382DF26450000D71E5 /* AddDishView.swift */,
+				D6DDF6412DF4E561000D71E5 /* CartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 			children = (
 				D6DDF6212DF11806000D71E5 /* Dish.swift */,
 				D6DDF62B2DF2283A000D71E5 /* Tab.swift */,
+				D6DDF6452DF4EC8A000D71E5 /* CartItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D6DDF63A2DF39523000D71E5 /* DishViewModel.swift */,
+				D6DDF6472DF4ECC1000D71E5 /* CartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -209,10 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6DDF6422DF4E561000D71E5 /* CartView.swift in Sources */,
 				D6DDF6392DF26450000D71E5 /* AddDishView.swift in Sources */,
+				D6DDF6462DF4EC8A000D71E5 /* CartItem.swift in Sources */,
 				D6DDF61A2DF0E3B3000D71E5 /* MenuView.swift in Sources */,
 				D6DDF6092DF0E180000D71E5 /* ContentView.swift in Sources */,
 				D6DDF63B2DF39523000D71E5 /* DishViewModel.swift in Sources */,
+				D6DDF6482DF4ECC1000D71E5 /* CartViewModel.swift in Sources */,
 				D6DDF6322DF232C1000D71E5 /* TabPosition.swift in Sources */,
 				D6DDF60B2DF0E180000D71E5 /* Item.swift in Sources */,
 				D6DDF6072DF0E180000D71E5 /* HomeBitesApp.swift in Sources */,

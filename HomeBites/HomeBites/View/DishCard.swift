@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DishCard: View {
     let dish: Dish
+    @ObservedObject var cartVM: CartViewModel
     
     var body: some View {
         HStack(alignment: .center) {
@@ -45,6 +46,7 @@ struct DishCard: View {
             Spacer()
             
             Button {
+                cartVM.add(dish: dish)
             } label : {
                 Image(systemName: "plus.circle.fill")
                     .font(.title2)
@@ -55,5 +57,5 @@ struct DishCard: View {
 }
 
 #Preview {
-    DishCard(dish: Dish(name: "Roast Chicken", rating: 4, isAvailable: true, dishDescription: ""))
+    DishCard(dish: Dish(name: "Roast Chicken", rating: 4, isAvailable: true, dishDescription: ""), cartVM: CartViewModel())
 }

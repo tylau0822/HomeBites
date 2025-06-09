@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var cartVM = CartViewModel()
     @State private var activeTab: Tab = .menu
     @Namespace private var animation
     @State private var tabShapePosition: CGPoint = .zero
@@ -20,7 +21,7 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
-                MenuView()
+                MenuView(cartVM: cartVM)
                     .tag(Tab.menu)
                 
                 Text("Orders")
