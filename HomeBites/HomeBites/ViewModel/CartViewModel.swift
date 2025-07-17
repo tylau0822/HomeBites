@@ -8,9 +8,7 @@
 import Foundation
 
 class CartViewModel: ObservableObject {
-    @Published var items: [CartItem] = [
-        CartItem(dish: Dish(name: "Chicken"))
-    ]
+    @Published var items: [CartItem] = []
     
     func add(dish: Dish) {
         items.append(CartItem(dish: dish))

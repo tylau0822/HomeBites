@@ -9,9 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct MenuView: View {
-//    let dishes = Dish.all()
     @Query private var dishes: [Dish]
     @ObservedObject var cartVM: CartViewModel
+    @Binding var showAddDishModal: Bool
     
     var body: some View {
         NavigationStack {
@@ -86,6 +86,18 @@ struct MenuView: View {
     
                     Spacer()
                     
+                    Image(systemName: "plus")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20, height: 20)
+                        .padding(5)
+                        .foregroundStyle(.white)
+                        .background(Color.black.opacity(0.6))
+                        .clipShape(Circle())
+                        .onTapGesture {
+                            showAddDishModal = true
+                        }
+                    
                     NavigationLink(destination: CartView(cartVM: cartVM)) {
                         Image(systemName: "cart")
                             .resizable()
@@ -103,5 +115,5 @@ struct MenuView: View {
 }
 
 #Preview {
-    MenuView(cartVM: CartViewModel())
+    MenuView(cartVM: CartViewModel(), showAddDishModal: .constant(false))
 }

@@ -22,6 +22,12 @@ class DishViewModel: ObservableObject {
         let imageData = selectedImage?.jpegData(compressionQuality: 0.8)
         let newDish = Dish(name: name, imageData: imageData, rating: rating, isAvailable: isAvailable, dishDescription: dishDescription)
         context.insert(newDish)
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed to save dish: \(error)")
+        }
     }
 
     func handleImageSelection() {

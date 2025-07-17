@@ -13,6 +13,8 @@ struct HomeBitesApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Dish.self,
+            Order.self,
+            OrderItem.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CartView: View {
     @ObservedObject var cartVM: CartViewModel
+    @Environment(\.modelContext) private var context
     
     var body: some View {
         VStack {
@@ -50,7 +51,9 @@ struct CartView: View {
                 Spacer()
                 
                 Button("Place order") {
-                    
+                    let orderVM = OrderViewModel()
+                    orderVM.saveOrder(context: context, from: cartVM.items)
+                    cartVM.clear()
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
                 .background(.ashyBlue)
                 .foregroundStyle(.white)
@@ -59,6 +62,7 @@ struct CartView: View {
             }
         }.navigationTitle("Cart")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar(.hidden, for: .tabBar)
     }
     
     private func deleteItem(at offsets: IndexSet) {
