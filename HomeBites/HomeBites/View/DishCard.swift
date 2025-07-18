@@ -14,17 +14,30 @@ struct DishCard: View {
     var body: some View {
         HStack(alignment: .center) {
             HStack(alignment: .top, spacing: 12) {
-                if let data = dish.imageData, let uiImage = UIImage(data: data) {
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 50, height: 50)
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                } else {
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(Color.gray.opacity(0.2))
-                        .frame(width: 50, height: 50)
-                        .overlay(Image(systemName: "photo").foregroundColor(.gray))
+                ZStack(alignment: .topTrailing) {
+                    if let data = dish.imageData, let uiImage = UIImage(data: data) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 50, height: 50)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    } else {
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color.gray.opacity(0.2))
+                            .frame(width: 50, height: 50)
+                            .overlay(Image(systemName: "photo").foregroundColor(.gray))
+                    }
+                    
+                    if cartVM.quantity(for: dish) > 0 {
+                        Text("\(cartVM.quantity(for: dish))")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .padding(6)
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .clipShape(Circle())
+                            .offset(x: 4, y: -8)
+                    }
                 }
                 
                 VStack(alignment: .leading, spacing: 4) {

@@ -44,8 +44,27 @@ struct CartView: View {
                                 .lineLimit(2)
                                 .font(.system(size: 14))
                                 .bold()
+                            
+                            Button {
+                                cartVM.minus(dish: item.dish)
+                            } label : {
+                                Image(systemName: "minus.circle.fill")
+                                    .font(.title2)
+                                    .foregroundColor(.ashyBlue)
+                            }.buttonStyle(.plain)
+                            
+                            Text("\(item.quantity)")
+                            
+                            Button {
+                                cartVM.add(dish: item.dish)
+                            } label : {
+                                Image(systemName: "plus.circle.fill")
+                                    .font(.title2)
+                                    .foregroundColor(.ashyBlue)
+                            }.buttonStyle(.plain)
                         }
-                    }.onDelete(perform: deleteItem)
+                    }
+                    .onDelete(perform: deleteItem)
                 }
                 
                 Spacer()
